@@ -11,12 +11,6 @@ describe "StaticPages" do
       visit '/static_pages/home'
       page.should have_content('Welcome to RubyGardens Home')
   end
-
-    it "should have link to about page" do
-      visit '/static_pages/home'
-      click_link 'About'
-      current_path.should == '/static_pages/about'
-    end
   end
 
   describe "About page" do
@@ -29,12 +23,6 @@ describe "StaticPages" do
       visit '/static_pages/about'
       page.should have_content('About RubyGardens')
     end
-
-    it "should have link to home page" do
-      visit '/static_pages/about'
-      click_link 'Home'
-      current_path.should == '/static_pages/home'
-    end
   end
 
   describe "Who we are page" do
@@ -46,6 +34,20 @@ describe "StaticPages" do
     it "should have about content" do
       visit who_we_are_path
       page.should have_content('Who We Are')
+    end
+  end
+
+  describe "Menu link" do
+    it "should have link to about page" do
+      visit '/static_pages/home'
+      click_link 'About'
+      current_path.should == '/static_pages/about'
+    end
+
+    it "should have link to home page" do
+      visit '/static_pages/about'
+      click_link 'Home'
+      current_path.should == '/static_pages/home'
     end
   end
 end
