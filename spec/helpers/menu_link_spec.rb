@@ -3,27 +3,15 @@ describe ApplicationHelper do
   describe "#menu_link" do
 
     it "should have link to home page" do
-      helper.menu_link.should have_selector('li a',:href => home_path, content: 'Home')
+      helper.menu_link.should have_link('Home', :href => '/static_pages/home')
     end
 
     it "should have link to about page" do
-      helper.menu_link.should have_selector('li a',:href => about_path, content: 'About')
+      helper.menu_link.should have_link('About', :href => about_path )
     end
 
     it "should have link to who-we-are page" do
-      helper.menu_link.should have_selector('li a',:href => '/who-we-are', content: 'what?')
-    end
-
-    it 'ffffffff' do
-      helper.menu_link.should have_selector('li') do |a|
-        a.should have_selector('a',:href => home_path, content: 'Home')
-      end
-    end
-
-    it 'dddddddd' do
-      helper.menu_link.should have_selector('li') do |a|
-        a.should have_selector('a',:href => about_path, content: 'Home')
-      end
+      helper.menu_link.should have_link('Who We Are', :href => '/who-we-are' )
     end
   end
 end

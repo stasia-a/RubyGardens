@@ -10,7 +10,7 @@ module ApplicationHelper
     end
 
     content_for :navigation do
-      content_tag(:li,link_to('Who We Are', who_we_are_path))
+     content_tag(:li,link_to('Who We Are', who_we_are_path))
     end
     content_for(:navigation)
   end
