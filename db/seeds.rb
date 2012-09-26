@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+  @emails = %w( sergey.berdnikovich anastasia.charushina anton.dziga konstantin.ilchenko alexander.karmes stanislav.knyazev alexander.koshelapov yulia.oletskaya konstantin.savon anastasia.shaternik sergey.starikov viktor.voinilovich)
+  @emails.each { |email| User.create(email: email) }

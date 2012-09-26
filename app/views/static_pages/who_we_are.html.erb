@@ -1,9 +1,7 @@
 <% content_for(:title) { 'Who We Are' } %>
 <h1>Who We Are</h1>
 <ul>
-  <% @emails.each do |email| %>
-    <li><%= image_tag gravatar_helper(email) %></li>
-
+  <% @users.each do |user| %>
+    <li><%= image_tag gravatar_helper(user.email) %></li>
   <% end %>
-  <%= Digest::MD5.hexdigest("paveltyk@gmail.com")  %>
 </ul>

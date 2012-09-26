@@ -6,6 +6,6 @@ class StaticPagesController < ApplicationController
   end
 
   def who_we_are
-    @emails =  %w( sergey.berdnikovich anastasia.charushina anton.dziga konstantin.ilchenko alexander.karmes stanislav.knyazev alexander.koshelapov yulia.oletskaya konstantin.savon anastasia.shaternik sergey.starikov viktor.voinilovich)
+    @users = User.all
   end
 end
