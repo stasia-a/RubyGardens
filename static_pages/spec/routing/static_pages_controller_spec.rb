@@ -12,4 +12,5 @@ describe 'Routing to StaticPagesController' do
   it 'routes GET /static_pages/about to #about' do
     {get: '/static_pages/about'}.should route_to('static_pages#about')
   end
+
 end
